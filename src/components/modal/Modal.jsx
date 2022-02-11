@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import moment from "moment";
-import { createEvent } from "../../gateway/events";
-import { addMinutes, getDateTime } from "../../utils/dateUtils";
-import "./modal.scss";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import moment from 'moment';
+import { createEvent } from '../../gateway/events';
+import { addMinutes, getDateTime } from '../../utils/dateUtils';
+import './modal.scss';
+import PropTypes from 'prop-types';
 
 const Modal = ({ modalWindow, getEventsList }) => {
   const [eventData, setEventData] = useState({
-    title: "",
-    date: moment(new Date()).format("YYYY-MM-DD"),
-    startTime: moment(new Date()).format("HH:mm"),
-    endTime: moment(addMinutes(15)).format("HH:mm"),
-    description: "",
+    title: '',
+    date: moment(new Date()).format('YYYY-MM-DD'),
+    startTime: moment(new Date()).format('HH:mm'),
+    endTime: moment(addMinutes(15)).format('HH:mm'),
+    description: '',
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const eventObject = {
@@ -30,7 +30,7 @@ const Modal = ({ modalWindow, getEventsList }) => {
 
   const { title, date, startTime, endTime, description } = eventData;
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
 
     setEventData({

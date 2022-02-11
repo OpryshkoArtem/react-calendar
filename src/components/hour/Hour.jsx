@@ -1,19 +1,12 @@
-import React from "react";
-import Event from "../event/Event";
-import PropTypes from "prop-types";
+import React from 'react';
+import Event from '../event/Event';
+import PropTypes from 'prop-types';
 
 const Hour = ({ dataHour, hourEvents, removeEventHandler }) => {
   return (
     <div className="calendar__time-slot" data-time={dataHour + 1}>
       {hourEvents.map(({ id, ...hourEvent }) => {
-        return (
-          <Event
-            key={id}
-            id={id}
-            {...hourEvent}
-            removeEventHandler={removeEventHandler}
-          />
-        );
+        return <Event key={id} id={id} {...hourEvent} removeEventHandler={removeEventHandler} />;
       })}
     </div>
   );

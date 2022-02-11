@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./redLine.scss";
+import React, { useEffect, useState } from 'react';
+import './redLine.scss';
 
 const RedLine = () => {
   const [timeLine, setTimeLine] = useState({
