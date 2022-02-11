@@ -3,6 +3,7 @@
   height: 60px;
   padding: 0 48px;
   align-items: center;
+  background-color: #85603f;
 }
 
 .create-event-btn {
@@ -25,7 +26,9 @@
   }
 
   &__displayed-month {
+    color: #e3d18a;
+    font-size: 22px;
     margin-left: 10px;
-    background-color: yellow; // FIXME
+    font-weight: 700;
   }
 }

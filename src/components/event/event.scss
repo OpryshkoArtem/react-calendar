@@ -1,11 +1,12 @@
 .event {
   position: absolute;
-  width: 80%;
-  background-color: cornflowerblue;
+  width: 100%;
+  background-color: #e3d18a;
   z-index: 1;
   border-radius: 8px;
   padding: 8px;
-  color: #fff;
+  color: #5b4636;
+  transition: all 0.3s;
 
   &__title {
     width: 100%;
@@ -15,13 +16,39 @@
     margin-bottom: 8px;
   }
 
+  &__description {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+
   &:hover {
-    font-weight: bold;
-    background-color: red;
+    color: #e3d18a;
+    background-color: #5b4636;
   }
 }
 
 .delete-event-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 1;
   cursor: pointer;
   border: none;
+  width: 50%;
+  height: 35px;
+  top: 1px;
+  border-radius: 8px;
+  color: #bd9354;
+  background-color: #5b4636;
+
+  &:hover {
+    color: yellow;
+    background-color: #9e7540;
+    transition: all 0.3s;
+  }
 }
