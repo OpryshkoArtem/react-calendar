@@ -17,7 +17,7 @@ const Calendar = ({ weekDates, handleModal, isShowModal }) => {
       const newEvents = events.filter(({ dateFrom }) =>
         weekDate.includes(moment(dateFrom).format('MMMM DD YYYY')),
       );
-      return setEvents(newEvents);
+      setEvents(newEvents);
     });
   };
 
